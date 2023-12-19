@@ -1,0 +1,24 @@
+<html>
+    <body>
+    <h2>JS EVENT HANDLING</h2>
+
+<p>This program shows events mouse over,mouse cliked,mouse out using button.</p>
+<button id="btn">click</button>
+<p id="demo"></p>
+<script>
+var x = document.getElementById("btn");
+x.addEventListener("mouseover", mouseOver);
+x.addEventListener("click", mouseClick);
+x.addEventListener("mouseout", mouseOut);
+function mouseOver(){
+    document.getElementById("demo").innerHTML+="Moused over!<br>";
+}
+function mouseClick(){
+    document.getElementById("demo").innerHTML+="Mouse Clicked!<br>";
+}
+function mouseOut(){
+    document.getElementById("demo").innerHTML+="Moused out!<br>";
+}
+</script>
+</body>
+</html>

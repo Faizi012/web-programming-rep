@@ -1,0 +1,49 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Image and Text Hover</title>
+<style>
+#image-container {
+position: relative;
+width: 600px;
+height: 500px;
+background-color: #ccc;
+text-align: center;
+}
+#image-container img {
+width: 100%;
+height: auto; }
+#hidden-content {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+color: white;
+text-align: center;
+display: none; }
+</style>
+</head>
+<body>
+
+<div id="image-container">
+<img src="C:\Users\MITS\Desktop\s1mca\web\download.jpg">
+<p id="image-text"></p>
+<div id="hidden-content">
+<img src="C:\Users\MITS\Desktop\s1mca\web\bmw-ninet.webp">
+</div>
+</div>
+<script>
+const imageContainer = document.getElementById('image-container');
+const hiddenContent = document.getElementById('hidden-content');
+const imageText = document.getElementById('image-text');
+imageContainer.addEventListener('mouseover', () => {
+hiddenContent.style.display = 'block';
+imageText.textContent = 'bike'; });
+imageContainer.addEventListener('mouseout', () => {
+hiddenContent.style.display = 'none';
+imageText.textContent = 'car'; });
+</script>
+</body>
+</html>

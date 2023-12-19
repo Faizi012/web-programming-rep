@@ -1,0 +1,46 @@
+<html>
+<head>
+<script type="text/javascript">
+function formValidate()
+{
+ let NV = /^[a-zA-Z]+$/;
+          let a = document.forms["regform"]["fname"].value;
+ if (NV.test(a)==false) {
+   alert("Name must only contain letters");
+   return false;
+ }
+let b = document.forms["regform"]["email"].value;
+ if (b == "") {
+   alert("Email must be filled out");
+   return false;
+ }
+        let c = document.forms["regform"]["phone"].value;
+         var phoneno = /^\d{10}$/;
+ if (phoneno.test(c)==false) {
+   alert("Phone number should have 10 digits");
+   return false;
+ }
+let d= document.forms["regform"]["pass"].value;
+ if (d.length<8) {
+   alert("Password must have atleast 8 character");
+   return false;
+ }
+}
+</script>
+    </head>
+<body style="background-image:url('mits.jpeg');">
+<h1><center>REGISTRATION FORM</center></h1>
+<br>
+<br>
+<form name="regform" action="#" onsubmit="return formValidate()">
+<h3>
+<center>
+NAME<br><input type="text" name="fname" placeholder="First name" required><br><br>
+EMAIL<BR><input type="email" name="email" placeholder="Email"required><br><br>
+PHONE NUMBER<BR><input type="number" name="phone" placeholder="phone" required><br><br>
+ADDRESS<BR><input type="text" name="address" placeholder="address" required><br><br>
+PASSWORD<BR><input type="password" name="pass" placeholder="password" required><br><br>
+<button type="submit">submit</button></center>
+
+</body>
+</html>
